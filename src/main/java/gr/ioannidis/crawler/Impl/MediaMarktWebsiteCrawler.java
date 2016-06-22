@@ -56,6 +56,7 @@ public class MediaMarktWebsiteCrawler implements IWebsiteCrawler {
     }
 
     private void produceLinksFromUrl(String url) {
+        // The base case of the recursion
         if (!websiteLinks.contains(url) && websiteLinks.size() < numberOfPagesToCrawl) {
             websiteLinks.add(url);
             Document doc = null;
